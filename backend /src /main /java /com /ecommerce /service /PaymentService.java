@@ -9,3 +9,8 @@ public class PaymentService {
         return paymentRepository.save(payment);
     }
 }
+    public Order checkout(Long userId, String paymentMethod) {
+        Order order = // ... (υπάρχουσα λογική)
+        paymentService.processPayment(order, paymentMethod);
+        return order;
+    }
