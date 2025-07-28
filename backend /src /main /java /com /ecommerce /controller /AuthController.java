@@ -1,9 +1,18 @@
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+    @Autowired
+    private AuthService authService;
+
+    @PostMapping("/register")
+    public ResponseEntity<User> register(@RequestBody User user) {
+        User newUser = authService.register(user);
+        return ResponseEntity.ok(newUser);
+    }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest request) {
-        // Υλοποίηση JWT
-        return ResponseEntity.ok("Login successful!");
+        String token = authService.login(request);
+        return ResponseEntity.ok(token);
     }
 }
