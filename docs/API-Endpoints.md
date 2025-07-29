@@ -47,9 +47,9 @@ POST /api/auth/register
 GET /api/products
 ```
 **Query Params**:
-- `category` (optional)
-- `minPrice` (optional)
-- `maxPrice` (optional)
+- `category` 
+- `minPrice` 
+- `maxPrice` 
 
 **Response**:
 ```json
