@@ -13,7 +13,6 @@ public class EcommerceApplication {
         SpringApplication.run(EcommerceApplication.class, args);
     }
 
-    // Προαιρετικό: Ρύθμιση CORS αν το Frontend τρέχει σε διαφορετικό port
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
